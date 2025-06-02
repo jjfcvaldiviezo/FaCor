@@ -162,7 +162,7 @@ li {
 /*Main*/
 
 .hero-section {
-  background-image: url('./img/Portada.jpeg'); /* Tu imagen de modelo */
+  background-image: url('./img/Portada.jpeg'); 
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -173,7 +173,6 @@ li {
   align-items: center;
 }
 
-/* 2. Capa semitransparente sobre el fondo */
 .overlay {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 2rem 3rem;
@@ -182,14 +181,12 @@ li {
   animation: fadeInOverlay 1s ease-in-out;
 }
 
-/* 3. Logo con animación “flotante” */
 .hero-logo {
   width: 200px;
   height: auto;
   animation: floatLogo 4s ease-in-out infinite;
 }
 
-/* 4. Texto principal con animación de entrada */
 .hero-text {
   font-family: 'DM Sans', sans-serif;
   font-size: 2rem;
@@ -199,7 +196,6 @@ li {
   animation: fadeInText 2s ease-in-out;
 }
 
-/* 5. Keyframes para animaciones */
 @keyframes floatLogo {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-10px); }
@@ -215,13 +211,239 @@ li {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 6. Si querés agregar un efecto “parpadeo” muy sutil (opcional) */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.9; }
 }
 
-/* Aplicar un loop sutil de parpadeo sobre toda la sección (opcional) */
 .hero-section {
   animation: blink 6s infinite;
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 767px) {
+  .logo {
+    width: 60%; 
+    padding-top: 1rem;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column; 
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .hero-logo {
+    width: 150px; 
+  }
+
+  .hero-text {
+    font-size: 1.5rem; 
+  }
+
+  .overlay {
+    padding: 1.5rem 2rem; 
+  }
+
+  footer {
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-contacto li {
+    padding-top: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    flex-direction: row; 
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 30%; 
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+
+  .hero-logo {
+    width: 180px;
+  }
+
+  .hero-text {
+    font-size: 1.8rem;
+  }
+
+  .overlay {
+    padding: 2rem 2.5rem;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 25%;
+  }
+
+  nav ul {
+    gap: 40px;
+  }
+
+  .hero-logo {
+    width: 200px;
+  }
+
+  .hero-text {
+    font-size: 2.2rem;
+  }
+
+  .overlay {
+    padding: 2.5rem 3.5rem;
+  }
+}
+
+/*Formulario*/
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: 2px solid #d6d3cc;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+legend {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #171715;
+  padding: 0 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  color: #171715;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical; 
+  min-height: 100px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #d6d3cc;
+  color: #171715;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: auto;
+  align-self: flex-start; 
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #a7a49e;
+  color: #f2edefc9;
+}
+
+input[type="submit"] {
+  margin-right: 10px; 
+}
+
+
+
+@media (max-width: 767px) {
+  main {
+    padding: 15px;
+  }
+
+  fieldset {
+    padding: 1.5rem;
+  }
+
+  legend {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"],
+  textarea {
+    width: calc(100% - 20px);
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%; 
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    padding: 30px;
+  }
+
+  fieldset {
+    padding: 2rem;
+  }
+
+  legend {
+    font-size: 1.6rem;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    align-self: center; 
+  }
 }
