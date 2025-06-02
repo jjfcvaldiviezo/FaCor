@@ -1,0 +1,227 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Custom styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: static;
+  top: 0px;
+  color: #171715 ;
+  width: 100%;
+}
+
+
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+p{
+  margin: 0;
+}
+
+footer{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nav{
+  height: auto;
+  margin-right: 0;
+  padding-bottom: 1rem;
+}
+
+.nav li a, .nav li {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.dm-sans-normal-400 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.colorPrincipal {
+  background-color: #d6d3cc;
+}
+
+.colorSecundaria {
+  background-color: #f2edefc9;
+}
+
+.transicion:hover{
+  color: #f2edefc9;
+}
+
+.fa-instagram{
+  font-size: 24px;
+}
+
+.fa-whatsapp{
+  font-size: 24px;
+}
+
+.logo{
+  width: 40%;
+
+}
+
+.social-icons{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-contacto{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3px;
+}
+
+.footer-contacto li{
+  padding-top: 1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/*Main*/
+
+.hero-section {
+  background-image: url('./img/Portada.jpeg'); /* Tu imagen de modelo */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. Capa semitransparente sobre el fondo */
+.overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  animation: fadeInOverlay 1s ease-in-out;
+}
+
+/* 3. Logo con animación “flotante” */
+.hero-logo {
+  width: 200px;
+  height: auto;
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+/* 4. Texto principal con animación de entrada */
+.hero-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #171715;
+  margin-top: 1rem;
+  animation: fadeInText 2s ease-in-out;
+}
+
+/* 5. Keyframes para animaciones */
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInText {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 6. Si querés agregar un efecto “parpadeo” muy sutil (opcional) */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.9; }
+}
+
+/* Aplicar un loop sutil de parpadeo sobre toda la sección (opcional) */
+.hero-section {
+  animation: blink 6s infinite;
+}

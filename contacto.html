@@ -9,41 +9,67 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <title>FaCor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>FaCor - Contacto</title>
   </head>
-  <body>
-    <header class="dm-sans-normal-400">
-      <img src="./img/logo_trasparente.png" width="10%" alt="Logo" />
-      <h1>FaCor</h1>
+  <body class="colorSecondario">
+    <header class="dm-sans-normal-400 colorPrincipal">
+    <div>
+      <a href="./index.html"><img src="./img/logo_trasparente.png" alt="Logo" class="logo" /></a>
+    </div>
+    <div class="nav">
       <nav>
         <ul>
-          <li><a href="./marcas.html">Marcas</a></li>
+          <li><a href="./marcas.html" class="transicion">Marcas</a></li>
           <li>Mujer</li>
           <li>Hombre</li>
           <li>Juvenil</li>
           <li>Niño</li>
-          <li>Contacto</li>
+          <li><a href="./contacto.html" class="transicion">Contacto</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
     <main>
-        <form action="https://formspree.io/f/xblovbjv" method="post">
+        <fieldset>
+          <legend class="dm-sans-normal-400">Datos del contacto:</legend><br>
+          <form action="https://formspree.io/f/xblovbjv" method="post">
+            <label for="nombre" class="dm-sans-normal-400">Nombre:</label><br>
             <input type="text" name="Nombre" id="Nombre" placeholder="Ingrese su nombre:"/>
             <br>
+            <label for="email" class="dm-sans-normal-400">Email:</label><br>
             <input type="text" name="Email" id="email" placeholder="Ingrese su email:"/>
             <br>
+            <label for="consulta" class="dm-sans-normal-400">Consulta:</label><br>
             <textarea name="Consulta:" rows="5" cols="30" placeholder="Escriba aquí su consulta:"></textarea>
             <br>
             <br>
             <input type="submit" name="Submit" id="Submit" placeholder="Enviar"/>
             <input type="reset" name="Reset" id="reset" placeholder="Restablecer"/>
-        </form>
+          </form>
+        </fieldset>
     </main>
-    <footer>
-      <hr>
-      <p>Desarrollador: Franco Cortez - 2025 | <a href="mailto:jjfcvaldiviezo@gmail.com">Email: jjfcvaldiviezo@gmail.com</a></p>
-      <hr>
-    </footer>
+    <footer class="dm-sans-normal-400 colorPrincipal">
+    <div>
+      <p>
+        &copy Franco Cortez - 2025 |
+        <a href="mailto:jjfcvaldiviezo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </p>
+    </div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/facor.underwear/?hl=es" target="_blank" class="transicion"><i
+          class="fa-brands fa-instagram"></i></a>
+      <a href="https://web.whatsapp.com/send/?phone=5491140575103&text=Hola%2C%20necesito%20realizar%20la%20siguiente%20consulta"
+        target="_blank" rel="noopener noreferrer" class="transicion"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-contacto">
+      <p>Contactános:</p>
+
+      <li><a href="mailto:facor@gmail.com" class="transicion">facor@gmail.com</a></li>
+
+    </div>
+  </footer>
   </body>
 </html>
